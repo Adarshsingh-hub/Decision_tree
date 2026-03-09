@@ -23,10 +23,10 @@ data["Cluster"] = clusters
 
 print(data[["tenure","MonthlyCharges","TotalCharges","Cluster"]].head())
 
-#plt.scatter(data["tenure"], data["MonthlyCharges"], c=data["Cluster"])
-#plt.xlabel("Tenure")
-#plt.ylabel("Monthly Charges")
-#plt.title("Customer Clusters")
-#plt.show()
+plt.scatter(data["tenure"], data["MonthlyCharges"], c=data["Cluster"])
+plt.xlabel("Tenure")
+plt.ylabel("Monthly Charges")
+plt.title("Customer Clusters")
+plt.show()
 
 print(data.groupby("Cluster")[features].mean())
